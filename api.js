@@ -3,8 +3,8 @@ var https = require('https');
 var parser = require('cheerio');
 var router = express.Router();
 
-router.get('/api/searchmusic/:music', function (req, res, next) {
-  https.get('https://search.roblox.com/catalog/json?Category=9&Keyword=' + encodeURI(req.params.music), function (search) {
+router.get('/api/searchdecals/:music', function (req, res, next) {
+  https.get('https://search.roblox.com/catalog/json?Category=8&Keyword=' + encodeURI(req.params.music), function (search) {
     search.pipe(res);
   });
 });
